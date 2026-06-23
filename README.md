@@ -2,6 +2,9 @@
 
 A full-stack hotel booking web application with role-based access control, JWT authentication, and a complete room booking + payment flow.
 
+**Live Demo:** [https://hotel-booking-1-fbqr.onrender.com](https://hotel-booking-1-fbqr.onrender.com)
+> Note: Backend runs on Render free tier — first load may take 50 seconds to wake up.
+
 ---
 
 ## Tech Stack
@@ -167,5 +170,5 @@ stripe.secret-key=      # from dashboard.stripe.com
 - Passwords hashed with BCrypt
 - JWT tokens expire in 24 hours
 - Admin routes protected at both Spring Security config and controller level (`@PreAuthorize`)
-- CORS restricted to `localhost:3000`
+- CORS restricted to frontend origin only
 - Secrets never committed — managed via `application-local.properties` (gitignored)
