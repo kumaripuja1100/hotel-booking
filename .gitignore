@@ -1,0 +1,35 @@
+# ===========================
+# Environment files - NEVER commit
+# ===========================
+.env
+.env.local
+.env.production
+*.env
+
+# ===========================
+# Frontend (React)
+# ===========================
+node_modules/
+build/
+dist/
+
+# ===========================
+# Backend (Java/Spring Boot)
+# ===========================
+application-local.properties
+target/
+*.jar
+*.class
+
+# ===========================
+# IDE files
+# ===========================
+.idea/
+.vscode/
+*.iml
+
+# ===========================
+# OS files
+# ===========================
+.DS_Store
+Thumbs.db
