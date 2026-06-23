@@ -6,8 +6,7 @@ import { getBookingById, processPayment } from '../../services/api';
 import { toast } from 'react-toastify';
 import './Payment.css';
 
-// Replace with your real publishable key from https://dashboard.stripe.com/apikeys
-const stripePromise = loadStripe('pk_test_YOUR_PUBLISHABLE_KEY_HERE');
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY || '');
 
 const PAYMENT_METHODS = [
   { id: 'CREDIT_CARD', label: 'Credit Card', icon: '💳' },
