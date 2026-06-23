@@ -129,6 +129,10 @@ const PaymentForm = ({ booking }) => {
 
       <div className="payment-layout">
         <div className="payment-form-section">
+          <div className="demo-notice">
+            <strong>Demo Mode</strong> — No real payments are processed. Use test card: <code>4242 4242 4242 4242</code>, any future date, any CVV.
+          </div>
+
           <h2>Choose Payment Method</h2>
           <div className="payment-divider" />
 
