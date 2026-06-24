@@ -6,7 +6,8 @@ import { getBookingById, processPayment } from '../../services/api';
 import { toast } from 'react-toastify';
 import './Payment.css';
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY || '');
+// Replace with your real publishable key from https://dashboard.stripe.com/apikeys
+const stripePromise = loadStripe('pk_test_YOUR_PUBLISHABLE_KEY_HERE');
 
 const PAYMENT_METHODS = [
   { id: 'CREDIT_CARD', label: 'Credit Card', icon: '💳' },
@@ -129,10 +130,6 @@ const PaymentForm = ({ booking }) => {
 
       <div className="payment-layout">
         <div className="payment-form-section">
-          <div className="demo-notice">
-            <strong>Demo Mode</strong> — No real payments are processed. Use test card: <code>4242 4242 4242 4242</code>, any future date, any CVV.
-          </div>
-
           <h2>Choose Payment Method</h2>
           <div className="payment-divider" />
 
